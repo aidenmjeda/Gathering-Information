@@ -4,12 +4,13 @@ import requests
 import shodan
 from dotenv import load_dotenv
 load_dotenv()
+
 SHODAN_API_KEY = os.getenv("SHODAN_API_KEY")
 if not SHODAN_API_KEY:
     print("ERROR: Please set SHODAN_API_KEY environment variable and try again.")
     sys.exit(1)
 
-TARGET = "www.isecal.com"
+TARGET = "www.yoursite.com"
 DNS_RESOLVE_URL = "https://api.shodan.io/dns/resolve"
 
 def resolve_hostname_to_ip(hostname: str, api_key: str):
