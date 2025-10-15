@@ -1,1 +1,3 @@
 shodan
+requests
+python-dotenv
